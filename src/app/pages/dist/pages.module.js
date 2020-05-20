@@ -9,10 +9,14 @@ exports.__esModule = true;
 var core_1 = require("@angular/core");
 var pages_routes_1 = require("./pages.routes");
 var shared_module_1 = require("../shared/shared.module");
+var forms_1 = require("@angular/forms");
+var ng2_charts_1 = require("ng2-charts");
 var pages_component_1 = require("./pages.component");
 var dashboard_component_1 = require("./dashboard/dashboard.component");
 var progress_component_1 = require("./progress/progress.component");
 var graficas1_component_1 = require("./graficas1/graficas1.component");
+var incrementador_component_1 = require("../components/incrementador/incrementador.component");
+var grafico_dona_component_1 = require("../components/grafico-dona/grafico-dona.component");
 var PagesModule = /** @class */ (function () {
     function PagesModule() {
     }
@@ -22,7 +26,9 @@ var PagesModule = /** @class */ (function () {
                 pages_component_1.PagesComponent,
                 dashboard_component_1.DashboardComponent,
                 progress_component_1.ProgressComponent,
-                graficas1_component_1.Graficas1Component
+                graficas1_component_1.Graficas1Component,
+                incrementador_component_1.IncrementadorComponent,
+                grafico_dona_component_1.GraficoDonaComponent
             ],
             exports: [
                 dashboard_component_1.DashboardComponent,
@@ -31,7 +37,9 @@ var PagesModule = /** @class */ (function () {
             ],
             imports: [
                 shared_module_1.SharedModule,
-                pages_routes_1.PAGES_ROUTES
+                pages_routes_1.PAGES_ROUTES,
+                forms_1.FormsModule,
+                ng2_charts_1.ChartsModule
             ]
         })
     ], PagesModule);
